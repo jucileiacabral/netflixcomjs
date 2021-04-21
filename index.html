@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Netflix  Clone</title>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+	<div class="center"> 
+		<div class="header-left">
+			<a href=""><img src="img/logonetflix-1.png"/></a>
+			<div class="menu-header">
+				<ul>
+					<li><a href="">Início</a></li>
+					<li><a href="">Séries</a></li>
+					<li><a href="">Filmes</a></li>
+					<li><a href="">Bombando</a></li>
+					<li><a href="">Minha Lista</a></li>
+				</ul>	
+				
+			</div><!-- menu-header-->
+		</div><!--header-left-->
+
+		<div class="header-right">
+				<div class="search">
+					<i class="fas fa-search"></i>
+				</div><!--search-->
+			
+				<i class="fas fa-gift"></i>
+				<div class="notifications">
+					<div class="circle-notifications">
+						<span>10</span>
+					</div><!--circle-notification-->
+					<i class="fas fa-bell"></i>
+				</div><!--notifications-->
+
+			<i class="dropdown-button"><img src="img/perfil.PNG" ></i>
+			
+			
+			</div><!--dropdonw-->
+		</div><!--header-rigth-->
+		<div class="clear"></div>	
+	</div ><!--center-->
+</header>
+
+<section class="destaque">
+	<video class="video-destaque">
+	<iframe  src="https://www.youtube.com/embed/jeAx8pkloYk?start=3" title="YouTube video player" autoplay=1 frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			You browser does not support HTML5 video.
+	</video>
+	<div class="ouverlay"></div><!-- ouverlay escurece bacground-->
+	<div class="texto-destaque">
+		<h2>SCARFACE</h2>
+		<h3> Top 10 no Brasil hoje</h3>
+		<p> Um traficante de drogas cubano irascível mata e bufa até chegar ao topo. <br/> Uma vida épica merece uma queda épica. </p>
+		<br/>
+		<a class="play"><i class="fas fa-play"></i>  Assistir</a>
+		<a class="info"> <i class="fas fa-info-circle"></i>  Mais informações</a> 
+						
+	</div><!--texto destaque-->
+<div class="populares"><h2 >Populares na Netflix</h2></div>
+ 
+</section><!--destaque-->
+
+ 
+<section class="vitrine">
+	<div class="vitrine-flex">
+		<div class="vitrine-single-banner">
+			<div class="vitrine-wraper" style="background-image: url('img/Homem-Aranha.jpg');"></div>
+		</div>
+		<div class="vitrine-single-banner">
+			<div class="vitrine-wraper" style="background-image: url('img/duna.jpg');"></div>
+		</div>
+		<div class="vitrine-single-banner">
+			<div class="vitrine-wraper" style="background-image: url('img/maisa.jpg');"></div>
+		</div>
+		<div class="vitrine-single-banner">
+			<div class="vitrine-wraper" style="background-image: url('img/never.jpg');"></div>
+		</div>
+		<div class="vitrine-single-banner">
+			<div class="vitrine-wraper" style="background-image: url('img/Sonic.jpg');"></div>
+		</div>
+		<div class="vitrine-single-banner">
+			<div class="vitrine-wraper" style="background-image: url('img/Homem-Aranha.jpg');"></div>
+		</div>
+		<div class="vitrine-single-banner">
+			<div class="vitrine-wraper" style="background-image: url('img/desejo.jpg');"></div>
+		</div>
+		<div class="vitrine-single-banner">
+			<div class="vitrine-wraper" style="background-image: url('images/mortal-kombat.jpg');"></div>
+		</div>
+		
+	</div>
+	
+
+</section>
+
+	
+
+<script src="js/jquery.js"></script>
+	<script src="js/slick.min.js"></script>
+
+	<script>
+		$('.vitrine-flex').slick({
+	dots:false,
+	arrows:false,
+  infinite:false,
+  centerMode: false,
+  speed:1000,
+  slidesToShow: 6,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      pauseOnHover:false,
+        responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+  }]
+	});
+
+		$('.vitrine-wraper').hover(function(){
+			$(this).css('z-index','1000');
+		})
+
+		$('.vitrine-wraper').mouseout(function(){
+			$(this).css('z-index','0');
+		})
+	</script>
+
+</body>
+</html>
